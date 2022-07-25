@@ -46,7 +46,7 @@ int main() {
     }
 //welcome starts here
 
-    std::cout << "Welcome to 'Who used all the milk!?' your guide to ingredient substitution!\n\n";
+    std::cout << "Welcome to 'Who used all the milk!?' your guide to ingredient substitution!\n";
 
     int x = 0;
     std::string search_query;
@@ -61,11 +61,11 @@ int main() {
                 for(auto it: substitution_dict) {
                     std::cout << it.first << "\n";
                 }
-                std::cout << "Would you like more information on one of the ingredients?\n\n";
-                std::cout << "Press 'y' for yes or 'n' to exit:\n\n";
+                std::cout << "Would you like more information on one of the ingredients?\n";
+                std::cout << "Press 'y' for yes or 'n' to exit:\n";
                 std::cin >> response;
                 if(tolower(response) == 'n') {
-                   std::cout << "Thanks for using 'Who used all milk!?'\n\n";
+                   std::cout << "Thanks for using 'Who used all milk!?'\n";
                    std::cout << "Goodbye!"; 
                 }
                 else {
@@ -75,7 +75,7 @@ int main() {
 
             if(x == 2) {
                 std::vector<std::string> results;
-                std::cout << "Please enter a letter(s) or word to search:\n\n";
+                std::cout << "Please enter a letter(s) or word to search:\n";
                 std::cin >> search_query;
                 /*for(int i = 0; i < search_query.length(); i++) {
                     search_query = tolower(search_query[i]);
@@ -90,7 +90,7 @@ int main() {
                 }
 
                 catch (const std::out_of_range& e) {
-                    std::cout << "Sorry, no entry found. Please try another ingredient.\n\n";
+                    std::cout << "Sorry, no entry found. Please try another ingredient.\n";
                 }
 
                 std::cout << "If you would like to see more information on one of the results please enter 'y' for yes or 'n' for no:\n";
@@ -98,13 +98,13 @@ int main() {
 
                 if(tolower(response == 'y')) {
                     
-                    std::cout << "Please enter the number of the ingredient you would like to view:\n\n";
+                    std::cout << "Please enter the number of the ingredient you would like to view:\n";
                     std::cin >> list_choice;
 
                     try {
                         std::cout << "You selected:\n";
-                        std::cout << results[list_choice - 1] << "\n\n";
-                        std::cout << substitution_dict[results[list_choice - 1]] << "\n\n";
+                        std::cout << results[list_choice - 1] << "\n";
+                        std::cout << substitution_dict[results[list_choice - 1]] << "\n";
                     }
                     catch (const std::out_of_range& e) {
                             std::cout << "Sorry, no entry found. Please try another number.\n";
@@ -112,14 +112,14 @@ int main() {
                 }
                     
             }
-                std::cout << "Would you like to search another ingredient?\n\n";
-                std::cout << "Press 'y' to search, or 'n' to exit:\n\n";
+                std::cout << "Would you like to search another ingredient?\n";
+                std::cout << "Press 'y' to search, or 'n' to exit:\n";
 
                 x = 0;
                 std::cin >> response;
 
                 if(tolower(response) == 'n') {
-                    std::cout << "Thanks for using 'Who used all milk!?'\n\n";
+                    std::cout << "Thanks for using 'Who used all milk!?'\n";
                     std::cout << "Goodbye!\n";
                     break;
                 }
