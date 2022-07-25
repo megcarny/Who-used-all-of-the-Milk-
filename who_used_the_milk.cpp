@@ -6,7 +6,7 @@
 #include <vector>
 
 int welcome() {
-    std::cout << "Please enter 1 if you would like to see a list of ingredients:\n\n";
+    std::cout << "Please enter 1 if you would like to see a list of ingredients:\n";
     std::cout << "Please enter 2 if you would like to search for an ingredient:\n";
     int x;
     std::cin >> x;
